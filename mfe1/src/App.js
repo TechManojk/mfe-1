@@ -19,7 +19,7 @@ const App = () => {
       }}>
         <h1>Product Listing</h1>
 
-          <input type="text" value={input}  onChange={ (e)=>setInput(e.target.value)}/> 
+          <input type="text" value={input}  onChange={ (e)=>setInput(e.target.value)}/>   // adding search here
  
       </div>
       <RemoteApp/>
