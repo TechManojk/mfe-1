@@ -1,8 +1,14 @@
-import React, {Suspense} from "react";
-// const RemoteApp = React.lazy(() => import("app2/App"));
+import React, {Suspense, useState, useEffect} from "react";
 import RemoteApp from 'app2/App'
+import RemoteApp3 from 'app3/App'
 
 const App = () => {
+  const [input,setInput] = useState("");
+
+  useEffect(()=>{
+
+  },[]);
+
   return (
     <div>
       <div style={{
@@ -12,10 +18,12 @@ const App = () => {
         backgroundColor:"greenyellow"
       }}>
         <h1>Product Listing</h1>
+
+          <input type="text" value={input}  onChange={ (e)=>setInput(e.target.value)}/> 
+ 
       </div>
-      {/* <Suspense fallback={"loading..."}> */}
-        <RemoteApp/>
-      {/* </Suspense> */}
+      <RemoteApp/>
+      <RemoteApp3/>
     </div>)
 }
 
